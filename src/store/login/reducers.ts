@@ -7,9 +7,9 @@ export const loggedInReducer = (
   action: LoginActions
 ) => {
   switch (action.type) {
-    case "login":
+    case "@login/login":
       return { loggedIn: true };
-    case "logout":
+    case "@login/logout":
       return initialLoggedIn;
   }
   return state;
@@ -21,9 +21,9 @@ export const loggedUserReducer = (
   action: LoginActions
 ) => {
   switch (action.type) {
-    case "login":
+    case "@login/login":
       return { ...state, ...action.loggedUser };
-    case "logout":
+    case "@login/logout":
       return initialLoggedUser;
   }
   return state;

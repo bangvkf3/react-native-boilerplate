@@ -10,8 +10,8 @@ export type User = {
 
 export type LoginState = LoggedIn & User;
 
-export type LogoutAction = Action<"logout">;
-export type LoginAction = Action<"login"> & {
+export type LogoutAction = Action<"@login/logout">;
+export type LoginAction = Action<"@login/login"> & {
   loggedUser: User;
 };
 export type LoginActions = LogoutAction | LoginAction;
